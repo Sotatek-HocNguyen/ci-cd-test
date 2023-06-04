@@ -8,7 +8,9 @@ on:
       - 'main'
     paths:
         - backend/**
-
+defaults:
+  run:
+    working-directory: ./backend
 jobs:
   validate-lint:
     runs-on: ubuntu-latest
