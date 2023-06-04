@@ -12,7 +12,7 @@ defaults:
   run:
     working-directory: ./backend
 jobs:
-  validate-lint:
+  run-ci:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
