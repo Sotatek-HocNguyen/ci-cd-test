@@ -10,7 +10,7 @@ on:
         - frontend/**
 defaults:
   run:
-    working-directory: ./front
+    working-directory: ./frontend
 jobs:
   validate-lint:
     runs-on: ubuntu-latest
