@@ -1,5 +1,5 @@
 name: BE-CI
-run-name: ${{ github.actor }} is validating eslint.
+run-name: BE-CI
 
 on:
   pull_request:
