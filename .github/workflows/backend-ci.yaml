@@ -1,4 +1,4 @@
-name: FE-CI
+name: BE-CI
 run-name: ${{ github.actor }} is validating eslint.
 
 on:
@@ -22,3 +22,9 @@ jobs:
           echo "Start lint...."
           docker run -i --rm -v $(pwd):/app/source -v $(pwd)/.prettierrc:/app/.prettierrc hocptit/eslint-ci:0.0.1 "."
           echo "Lint done."
+      - name: Run unit test
+        run: |
+          echo "Start run...."
+          npx jest
+          echo "Run done."
+        
