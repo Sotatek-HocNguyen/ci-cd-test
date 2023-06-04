@@ -8,7 +8,7 @@ on:
     - backend/**
 jobs:
   build:
-    runs-on: [self-hosted,backend-server-dev]
+    runs-on: [self-hosted,backend-server-dev] # tag in server-dev
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -17,7 +17,8 @@ jobs:
           echo "Buil image"
 
   deploy:
-    runs-on: [self-hosted,backend-server-dev]
+    runs-on: [self-hosted,backend-server-dev] # tag in server-dev
+    needs: [ build ]
     steps:
       - name: Checkout
         uses: actions/checkout@v3
